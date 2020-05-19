@@ -3,19 +3,88 @@
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Total Downloads][ico-downloads]][link-downloads]
 [![Build Status][ico-travis]][link-travis]
-[![StyleCI][ico-styleci]][link-styleci]
 
-This is where your description should go. Take a look at [contributing.md](contributing.md) to see a to do list.
+The Carrier is a package for PHP and Laravel that provides integration with [postmon](https://postmon.com.br/) and the [IBGE api](https://servicodados.ibge.gov.br/api/docs/localidades?versao=1) to allow searches of addresses by cep and listings of states, cities, neighborhoods and regions of Brazil.
 
 ## Installation
 
 Via Composer
 
-``` bash
-$ composer require anselmojacyntho/carrier
+Pull this package in through Composer.
+
+```js
+
+    {
+        "require": {
+            "anselmojacyntho/carrier": "0.1.*"
+        }
+    }
+
+```
+
+or run in terminal:
+`composer require anselmojacyntho/carrier`
+
+### Laravel 5.0+ Integration
+
+Add the service provider to your `config/app.php` file:
+
+```php
+
+    'providers'     => array(
+
+        //...        
+        AnselmoJacyntho\Carrier\CarrierServiceProvider::class
+
+    ),
+
+```
+
+Add the facade to your `config/app.php` file:
+
+```php
+
+    'aliases'       => array(
+
+        //...        
+        'Carrier': AnselmoJacyntho\Carrier\Facades\Carrier::class
+
+    ),
+
 ```
 
 ## Usage
+
+The package provides an easy interface for search address by CEP or litings regions, states, cities and neighborhoods from your application. 
+
+### Laravel usage
+
+```php
+
+    use AnselmoJacyntho\Carrier\Facades\Carrier;
+
+    // Get address by cep
+    $response = Carrier::findByCep('328947');
+
+    // Get all regions
+    $response = Carrier::getRegions();
+
+    // Get states by region id
+    $response = Carrier::getStatesByRegion(1);
+
+    // Get all states
+    $response = Carrier::getStates();
+
+    // Get all cities
+    $response = Carrier::getCities();
+
+    // Get city by state id
+    $response = Carrier::getCitiesByState(3);
+
+    // Get all district by city id
+    $response = Carrier::getDistrictsByCity(3550308);
+
+```
 
 ## Change log
 
