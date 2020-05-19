@@ -1,4 +1,4 @@
-<?php namespace AnselmoJacyntho\Carrier;
+<?php namespace AnselmoJacyntho\Carrier\Lib;
 
 class Curl {
 

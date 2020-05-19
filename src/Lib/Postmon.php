@@ -1,6 +1,6 @@
-<?php namespace AnselmoJacyntho\Carrier;
+<?php namespace AnselmoJacyntho\Carrier\Lib;
 
-use AnselmoJacyntho\Carrier\Curl;
+use AnselmoJacyntho\Carrier\Lib\Curl;
 
 class Postmon {
 

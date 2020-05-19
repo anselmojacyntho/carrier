@@ -2,8 +2,8 @@
 
 namespace AnselmoJacyntho\Carrier;
 
-use AnselmoJacyntho\Carrier\Postmon;
-use AnselmoJacyntho\Carrier\IBGEService;
+use AnselmoJacyntho\Carrier\Lib\Postmon;
+use AnselmoJacyntho\Carrier\Lib\IBGEService;
 
 class Carrier
 {
