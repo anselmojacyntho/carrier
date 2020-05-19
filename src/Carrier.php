@@ -35,6 +35,11 @@ class Carrier
         return $this->ibge->getStates();
     }
 
+    public function getCities()
+    {
+        return $this->ibge->getCities();
+    }
+
     public function getCitiesByState($state_id)
     {
         return $this->ibge->getCitiesByState($state_id);
