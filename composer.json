@@ -1,14 +1,14 @@
 {
     "name": "anselmojacyntho/carrier",
     "description": "Custom library for address search by brazilians cep or listing regions, states, cities and district, using postmon and ibge service",
-    "license": "license",
+    "license": "MIT",
     "authors": [{
         "name": "Anselmo Jacyntho",
         "email": "anselmojacyntho@gmail.com",
         "homepage": "https://github.com/anselmojacyntho"
     }],
     "homepage": "https://github.com/anselmojacyntho/carrier",
-    "keywords": ["Laravel", "Carrier"],
+    "keywords": ["Laravel", "Carrier", "CEP", "find address"],
     "require": {
         "illuminate/support": "~5|~6|~7"
     },
