@@ -2,15 +2,46 @@
 
 namespace AnselmoJacyntho\Carrier;
 
+use AnselmoJacyntho\Carrier\Postmon;
+use AnselmoJacyntho\Carrier\IBGEService;
+
 class Carrier
 {
-    public function findByCep( intval($cep) )
-    {
+    protected $postmon;
+    protected $ibge;
 
+    public function __construct()
+    {
+        $this->postmon = new Postmon();
+        $this->ibge = new IBGEService();
+    }
+    public function findByCep($cep)
+    {
+        return $this->postmon->find($cep);
     }
 
-    public function jose()
+    public function getRegions()
     {
-        echo 'vai jose';
+        return $this->ibge->getRegions();
+    }
+
+    public function getStatesByRegion($region_id)
+    {
+        return $this->ibge->getStatesByRegion($region_id);
+    }
+
+    public function getStates()
+    {
+        return $this->ibge->getStates();
+    }
+
+    public function getCitiesByState($state_id)
+    {
+        return $this->ibge->getCitiesByState($state_id);
+    }
+
+    public function getDistrictsByCity($city_id)
+    {
+        return $this->ibge->getDistrictsByCity($city_id);
     }
 }
