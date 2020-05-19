@@ -2,6 +2,7 @@
     "name": "anselmojacyntho/carrier",
     "description": "Custom library for address search by brazilians cep or listing regions, states, cities and district, using postmon and ibge service",
     "license": "MIT",
+    "version": "0.1.0",
     "authors": [{
         "name": "Anselmo Jacyntho",
         "email": "anselmojacyntho@gmail.com",
