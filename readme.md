@@ -16,7 +16,7 @@ Pull this package in through Composer.
 
     {
         "require": {
-            "anselmojacyntho/carrier": "0.1.*"
+            "anselmojacyntho/carrier": "dev-master"
         }
     }
 
