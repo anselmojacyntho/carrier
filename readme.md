@@ -47,7 +47,7 @@ Add the facade to your `config/app.php` file:
     'aliases'       => array(
 
         //...        
-        'Carrier': AnselmoJacyntho\Carrier\Facades\Carrier::class
+        'Carrier' => AnselmoJacyntho\Carrier\Facades\Carrier::class
 
     ),
 
